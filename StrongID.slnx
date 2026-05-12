@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="StrongID/StrongID.csproj" />
+  <Project Path="TestApp/TestApp.csproj" />
+</Solution>
