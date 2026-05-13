@@ -11,7 +11,7 @@
     <RepositoryUrl>https://github.com/minogb/StrongID</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>database; api; strong; type</PackageTags>
-    <Version></Version>
+    <Version>1.0.1</Version>
     <PackageId>Minogb.Strong.ID</PackageId>
   </PropertyGroup>
 
