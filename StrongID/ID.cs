@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace StrongID {
+namespace Strong.ID {
     public interface IID<T> where T : IComparable {
         public abstract T Value { get; }
     }
