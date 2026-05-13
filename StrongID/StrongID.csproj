@@ -4,6 +4,15 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Strong ID</Title>
+    <Authors>Bradley Minogue</Authors>
+    <Description>Wrapper classes for strong ID's</Description>
+    <RepositoryUrl>https://github.com/minogb/StrongID</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>database; api; strong; type</PackageTags>
+    <Version></Version>
+    <PackageId>Minogb.Strong.ID</PackageId>
   </PropertyGroup>
 
 </Project>
