@@ -1,14 +1,22 @@
 ﻿using System.Numerics;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Strong.ID {
     public interface IID<T> where T : IComparable {
-        public abstract T Value { get; }
+        T Value { get; }
     }
     public class GenericID<T, J>: IID<J>, IComparable<GenericID<T, J>> where J : IComparable {
         protected J ProtectedValue;
-
         public J Value =>  ProtectedValue;
+        private GenericID() {
 
+        }
         public GenericID(J value) {
             if(Value == null) throw new ArgumentNullException("ID must have a non-null value");
             ProtectedValue = value;
@@ -24,7 +32,7 @@ namespace Strong.ID {
             return Value.ToString();
 #pragma warning restore CS8603 // Possible null reference return.
         }
-        public override bool Equals(object? obj) {
+        public override bool Equals(object obj) {
             var other = obj as GenericID<T, J>;
 #pragma warning disable CS8604 // Possible null reference argument.
 #pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
@@ -36,12 +44,12 @@ namespace Strong.ID {
         public override int GetHashCode() {
             return Value.GetHashCode();
         }
-        public int CompareTo(object? obj) {
+        public int CompareTo(object obj) {
             var other = obj as GenericID<T,J>;
             return this.CompareTo(other);
         }
 
-        public int CompareTo(GenericID<T, J>? other) {
+        public int CompareTo(GenericID<T, J> other) {
 #pragma warning disable CS8604 // Possible null reference argument.
 #pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             if (other == null) return -1;
