@@ -1,4 +1,4 @@
-﻿using StrongID;
+﻿using Strong.ID;
 
 namespace TestApp {
     internal class Program {
@@ -29,6 +29,9 @@ namespace TestApp {
             Console.WriteLine(value.Equals(value3) ? "equal" : "not equal");
             List.Sort();
 
+            GenericID<Program, string> value4 = new GenericID<Program, string>("1");
+            GenericID<Program, string> value5 = new GenericID<Program, string>("1");
+            GenericID<FileInfo,string> value6 = new GenericID<FileInfo, string>("1");
         }
     }
 }

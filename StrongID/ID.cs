@@ -18,7 +18,7 @@ namespace Strong.ID {
 
         }
         public GenericID(J value) {
-            if(Value == null) throw new ArgumentNullException("ID must have a non-null value");
+            if(value == null) throw new ArgumentNullException("ID must have a non-null value");
             ProtectedValue = value;
         }
         public static explicit operator J(GenericID<T,J> id) {
